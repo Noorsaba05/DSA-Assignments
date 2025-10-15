@@ -33,7 +33,7 @@ void insertNode(int data){
 		 nn->prev= temp;	
 			
 		}
-		//cout<<"/n Node inserted.";
+		cout<<"\n Node inserted.";
 	}
 
 void display(){
@@ -48,15 +48,30 @@ void display(){
 }
 
 int main(){
-/*int n;
-cout<<"Enter Data: ";
-cin>>n;*/
+int op,n;
+do{
 
-insertNode(10);
+        cout << "\n1. Insert" << endl;
+        cout << "2. Display" << endl;
+        cout << "3. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> op;
+        switch(op){
+        case 1: 
+        	cout<<"Enter data: ";
+        	cin>>n;
+        	insertNode(n);
+        	break;
+        case 2: display();
+        	break;
+        case 3: break;
+        }
+        }while(op!=3);
+/*insertNode(10);
 insertNode(20);
 insertNode(30);
 insertNode(40);
-
+*/
 display();
 
 return 0;
